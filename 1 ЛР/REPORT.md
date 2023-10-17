@@ -1,4 +1,4 @@
-<p align="center"><img src="C:\Users\vladg\YandexDisk\Компьютер DESKTOP-3C58TJL\Рабочий стол\M_3_sem\II_M3\1 ЛР\img.png"/></p>
+<p align="center"><img src="https://github.com/kirchofff/II_M3/blob/master/1%20%D0%9B%D0%A0/img.png"/></p>
 <h1 align="center">Исполнительный отчет</h1>
 <details><summary>Цель лабораторной работы</summary>
     Получение практических навыков работы с метрическими и линейными моделями классификации и регрессии
