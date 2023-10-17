@@ -1,5 +1,6 @@
 <p align="center"><img src="https://github.com/kirchofff/II_M3/blob/master/1%20%D0%9B%D0%A0/img.png"/></p>
-<h1 align="center">Исполнительный отчет</h1>
+<p align="center"><a href="https://readme-typing-svg.herokuapp.com?font=Open+Sans&duration=2500&pause=400&color=000000&random=false&width=435&lines=%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9+%D0%BE%D1%82%D1%87%D0%B5%D1%82" alt="Typing SVG" /></a>
+
 <details><summary>Цель лабораторной работы</summary>
     Получение практических навыков работы с метрическими и линейными моделями классификации и регрессии
  </details>
