@@ -19,7 +19,7 @@
 <summary><strong>Поиск оптимального С для метода логистической регрессии</strong></summary>
 <p align="center"><img src="https://github.com/kirchofff/II_M3/blob/master/1%20%D0%9B%D0%A0/img_3.png"/></p>
 <p align="center"> Рис.3 - Результаты кросс валидации с разбиением до масштабированием</p>
-<p align="center"><img src="https://github.com/kirchofff/II_M3/blob/master/1%20%D0%9B%D0%A0/img_4.png"/></p>
+<p align="center"><img src="https://github.com/kirchofff/II_M3/blob/master/1%20%D0%9B%D0%A0/img_6.png"/></p>
 <p align="center"> Рис.4 - Результаты кросс валидации с разбиением после масштабированием</p>
 </details>
 <details>
