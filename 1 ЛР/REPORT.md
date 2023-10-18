@@ -25,7 +25,7 @@
 <details>
 <summary><strong>Результаты работы программы</strong></summary>
     &nbsp;&nbsp;&nbsp;&nbsp; Вывод данных в консоль:
-<p align="center"><img src="https://github.com/kirchofff/II_M3/blob/master/1%20%D0%9B%D0%A0/img_5.png"/></p>
+<p align="center"><img src="https://github.com/kirchofff/II_M3/blob/master/1%20%D0%9B%D0%A0/img_7.png"/></p>
 <p align="center"> Рис.5 - Вывод результатов в консоль</p>
 </details>
 <details>
