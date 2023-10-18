@@ -84,6 +84,7 @@ print('Оптимальное значение C для метода логис�
 # Масштабирование признаков
 scaler = StandardScaler()
 attribute_x = pnd.DataFrame(scaler.fit_transform(attribute_x, answer_y), columns=attribute_x.columns)
+X_test = pnd.DataFrame(scaler.fit_transform(X_test, Y_test), columns=X_test.columns)
 
 print('--------------------------------------------------------------------------------------')
 
