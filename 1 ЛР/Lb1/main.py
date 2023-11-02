@@ -22,13 +22,13 @@ def neighbour_classifier(k, Y, X):
 
     # Оцениваем правильность предсказаний
     result = accuracy_score(Y, predictions)
-    # print('Правильность предсказаний текущей модели: ', result)
+    
     return result
 
 
 def cross_validation(attribute_x, answer_y):
     # Генератор разбиений для кросс-валидации
-    kf = KFold(n_splits=5, shuffle=True)
+    kf = KFold(n_splits=5, shuffle=True, random_state=44)
     accuracyKFold = []
     kMax = -1
     kMaxIndex = 0
@@ -49,11 +49,10 @@ def logistic_regression(X_test, Y_test, attribute_x, answer_y):
     c_max = 0
     c_array = []
     for c in C:
-        logisticRegression = LogisticRegression(random_state=17, fit_intercept=True, n_jobs=-1, max_iter=10_000, C=c).fit(attribute_x,
-                                                                                                      answer_y)
+        logisticRegression = LogisticRegression(random_state=44, fit_intercept=True, n_jobs=-1, max_iter=10_000, C=c)
+        logisticRegression.fit(attribute_x, answer_y)
         score_c_current = logisticRegression.score(X_test, Y_test)
         c_array.append(score_c_current)
-
         if c_max_score < score_c_current:
             c_max_score = score_c_current
             c_max = c
@@ -67,7 +66,7 @@ answer_y = data['diagnosis'].map({'B': 0, 'M': 1})
 attribute_x = data.drop(columns=['id', 'diagnosis', 'Unnamed: 32'], axis=1)
 
 # Разделим выборки на обучающую и тестовую
-X_train, X_test, Y_train, Y_test = train_test_split(attribute_x, answer_y, test_size=0.33, random_state=42)
+X_train, X_test, Y_train, Y_test = train_test_split(attribute_x, answer_y, test_size=0.3, random_state=42)
 
 accuracyArrayTestY = []
 accuracyArrayTrainY = []
@@ -97,21 +96,21 @@ print('Оптимальное значение C для метода логис�
 C = np.arange(0.01, 1, 0.01)
 
 plt.figure(figsize=(12, 7))
-# plt.subplot(3, 1, 1)
-# plt.plot(accuracyArrayTestY, label='Результаты тестирования')
-# plt.plot(accuracyArrayTrainY, label='Результаты обучения')
-# plt.legend()
-# plt.grid()
-# plt.subplot(3, 1, 2)
-# plt.plot(accuracyKFold, label='Результаты кросс-валидации разбиением')
-# plt.plot(accuracyKFold2, label='Результаты кросс-валидации разбиением после масштабирования')
-# plt.grid()
-# plt.legend()
-# plt.subplot(1, 1, 1)
+plt.subplot(4, 1, 1)
+plt.plot(accuracyArrayTestY, label='Результаты тестирования')
+plt.plot(accuracyArrayTrainY, label='Результаты обучения')
+plt.legend()
+plt.grid()
+plt.subplot(4, 1, 2)
+plt.plot(accuracyKFold, label='Результаты кросс-валидации разбиением')
+plt.plot(accuracyKFold2, label='Результаты кросс-валидации разбиением после масштабирования')
+plt.grid()
+plt.legend()
+plt.subplot(4, 1, 3)
 plt.plot(C, c_array, label='Метод логистической регрессии')
 plt.legend()
 plt.grid()
-plt.show()
+plt.subplot(4, 1, 4)
 plt.plot(C, c_array2, label='Метод логистической регрессии после масштабирования')
 plt.legend()
 plt.grid()
